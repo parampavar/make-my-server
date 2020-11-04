@@ -4,12 +4,12 @@ on:
   push:
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Pull dependencies
-        run: curl -L https://github.com/kubernetes/kompose/releases/download/v1.22.0/kompose-linux-amd64 -o komp && chmox +x komp && mkdir -p kompose
+        run: curl -L https://github.com/kubernetes/kompose/releases/download/v1.22.0/kompose-linux-amd64 -o komp && chmod +x komp && mkdir -p kompose
       - name: Creating new files
         run: ./komp convert $(find -name 'docker-compose*.yml' -type f -printf '%p\t%d\n'  2>/dev/null | sort -n -k2 | cut -f 1 | awk '{print "-f "$0}') -o kompose/
       - uses: EndBug/add-and-commit@v5
