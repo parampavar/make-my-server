@@ -1,14 +1,9 @@
-name: Docker
+name: Tests
 
 on:
   push:
-    branches:
-      - master
-  pull_request:
 
 jobs:
-  # Run tests.
-  # See also https://docs.docker.com/docker-hub/builds/automated-testing/
   test:
     runs-on: ubuntu-latest
     steps:
@@ -22,16 +17,3 @@ jobs:
           path: |
             log.log
             *.patch
-      - name: Pull dependencies
-        run: curl -L https://github.com/kubernetes/kompose/releases/download/v1.22.0/kompose-linux-amd64 -o komp && chmox +x komp && mkdir -p kompose
-      - name: Creating new files
-        run: ./komp convert $(find -name 'docker-compose*.yml' -type f -printf '%p\t%d\n'  2>/dev/null | sort -n -k2 | cut -f 1 | awk '{print "-f "$0}') -o kompose/
-      - uses: EndBug/add-and-commit@v5
-        with:
-          add: 'kompose/*'
-          author_name: Github Action
-          author_email: github+action@moulard.org
-          message: 'kompose: update yaml files'
-          signoff: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
