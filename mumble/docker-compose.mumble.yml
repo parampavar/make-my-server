@@ -1,5 +1,3 @@
-version: '2'
-
 services:
   mumble:
     image: 'mumblevoip/mumble-server:${MUMBLE_IMAGE_VERSION:-latest}'

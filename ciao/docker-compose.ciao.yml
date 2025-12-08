@@ -1,5 +1,3 @@
-version: '2'
-
 services:
   ciao:
     image: 'brotandgames/ciao:${CIAO_IMAGE_VERSION:-latest}'

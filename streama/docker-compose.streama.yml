@@ -1,5 +1,3 @@
-version: '2'
-
 services:
   streama:
     image: 'gkiko/streama:v1.8.3'

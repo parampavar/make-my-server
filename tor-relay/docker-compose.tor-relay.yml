@@ -1,5 +1,3 @@
-version: '2'
-
 # See https://blog.jessfraz.com/post/running-a-tor-relay-with-docker/
 # Checkout logs and https://atlas.torproject.org/ for annalytics
 

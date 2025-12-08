@@ -1,5 +1,3 @@
-version: '2'
-
 services:
   searxng:
     image: 'searxng/searxng:${SEARXNG_IMAGE_VERSION:-latest}'

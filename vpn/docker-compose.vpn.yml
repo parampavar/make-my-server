@@ -1,5 +1,3 @@
-version: '2'
-
 services:
   vpn:
     image: 'hwdsl2/ipsec-vpn-server:${VPN_IMAGE_VERSION:-latest}'

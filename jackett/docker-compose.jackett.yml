@@ -1,5 +1,3 @@
-version: '2'
-
 services:
   jackett:
     image: 'linuxserver/jackett:${JACKETT_IMAGE_VERSION:-v0.20.567-ls56}'

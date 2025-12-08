@@ -1,5 +1,3 @@
-version: '2'
-
 include:
   - path: 'docker-compose.networks.yml'
   - path: 'arachni/docker-compose.arachni.yml'

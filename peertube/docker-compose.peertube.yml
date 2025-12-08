@@ -1,5 +1,3 @@
-version: '2'
-
 services:
   peertube:
     image: 'chocobozzz/peertube:production-buster'

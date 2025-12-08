@@ -1,5 +1,3 @@
-version: '2'
-
 services:
   remotely:
     image: 'translucency/remotely:${REMOTELY_IMAGE_VERSION:-latest}'

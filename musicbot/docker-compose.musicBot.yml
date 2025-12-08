@@ -1,5 +1,3 @@
-version: '2'
-
 services:
   musicbot:
     image: 'raiponce/musicbot:0.2.10'

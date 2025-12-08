@@ -1,5 +1,3 @@
-version: '2'
-
 services:
   wordpress:
     image: 'wordpress:${WORDPRESS_IMAGE_VERSION:-6.2}'
