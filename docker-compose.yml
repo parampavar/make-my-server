@@ -22,6 +22,7 @@ include:
   - path: 'minecraft/docker-compose.minecraft.yml'
   - path: 'mumble/docker-compose.mumble.yml'
   - path: 'musicbot/docker-compose.musicBot.yml'
+  - path: 'n8n/docker-compose.n8n.yml'
   - path: 'nextcloud/docker-compose.nextcloud.yml'
   - path: 'nginx/docker-compose.nginx.yml'
   - path: 'pastebin/docker-compose.pastebin.yml'

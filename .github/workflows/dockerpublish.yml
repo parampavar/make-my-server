@@ -57,6 +57,11 @@ jobs:
   #   uses: 'tomMoulard/make-my-server/.github/workflows/healthcheck.workflow.tmpl.yml@master'
   #   with:
   #     service_name: 'mastodon'
+  Health-checks-n8n:
+    uses: 'tomMoulard/make-my-server/.github/workflows/healthcheck.workflow.tmpl.yml@master'
+    with:
+      service_name: 'n8n'
+      timeout-minutes: 5
   Health-checks-nextcloud:
     uses: 'tomMoulard/make-my-server/.github/workflows/healthcheck.workflow.tmpl.yml@master'
     with:

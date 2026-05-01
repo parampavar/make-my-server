@@ -4,6 +4,11 @@
 errors=0
 log_file=log.log
 
+# n8n intentionally requires a non-empty task-runner shared secret. Provide a
+# deterministic CI-only value so compose validation can render every included
+# service without weakening production defaults.
+export N8N_RUNNERS_AUTH_TOKEN="${N8N_RUNNERS_AUTH_TOKEN:-ci-n8n-runner-token}"
+
 GREEN="\e[32m"
 RED="\e[31m"
 WHITE="\e[0m"
